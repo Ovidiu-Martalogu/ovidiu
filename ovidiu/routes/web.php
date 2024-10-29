@@ -1,13 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\TeamController;
 
-
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::resource("team",TeamController::class);
+Route::any('/', [HomepageController::class, 'index'])->name('homepage');

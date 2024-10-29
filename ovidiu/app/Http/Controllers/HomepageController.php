@@ -2,22 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\team;
 use App\Http\Requests\StoreteamRequest;
 use App\Http\Requests\UpdateteamRequest;
+use App\Models\Team;
 use Illuminate\Support\Facades\DB;
 
-class TeamController extends Controller
+class HomepageController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data=DB::table('team')->orderBy('id')->get();
-        
-        return view('team', compact('data'))->with('i', (request()->input('page', 1) - 1 * 10));
-       
+//        $data=DB::table('team')->orderBy('id')->get();
+//        return view('team', compact('data'))->with('i', (request()->input('page', 1) - 1 * 10));
+
+        $team_members = Team::all();
+        return view('homepage', compact('team_members'));
     }
 
     /**
