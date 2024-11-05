@@ -5,7 +5,7 @@
     <body>
 {{--        @auth--}}
             <div id="modal-wrapper">@yield('modals')</div>
-{{--            @include('partials.general.header')--}} {{-- todo: create the missing partial, move the navbar from homepage to that partial and then include it in app by uncommenting it--}}
+           @include('partials.general.header')   {{-- DONE -todo: create the missing partial, move the navbar from homepage to that partial and then include it in app by uncommenting it-- }}
 
             {{-- Always include sidebar --}}
             {{-- @if(isset($sidebar) && $sidebar) --}}
@@ -16,7 +16,7 @@
             <div class="wrapper">
                 @yield('content')
 
-{{--                @include('partials.general.footer')--}}
+              @include('partials.general.footer')
             </div>
 
 {{--        @else--}}
