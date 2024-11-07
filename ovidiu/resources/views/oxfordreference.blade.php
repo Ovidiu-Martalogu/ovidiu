@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html><!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie6" lang="en"><![endif]-->
 <!--[if IE 7]>
@@ -37,6 +39,7 @@
 Requested: 10.2.2.253/10.2.2.253
 Port:443--><!-- Left Column -->
 <!-- Main Content Block -->
+@section('content')
 <html data-locale="en" lang="en" class="no-js">
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
     <script type="text/javascript" async=""
@@ -5220,6 +5223,7 @@ Port:443--><!-- Left Column -->
             <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NDJMKLV" height="0" width="0"
                     style="display:none;visibility:hidden"></iframe>
         </noscript>
+       
         <script>(function (w, d, s, l, i) {
                 w[l] = w[l] || [];
                 w[l].push({
@@ -5325,6 +5329,7 @@ Port:443--><!-- Left Column -->
                                 </a></div>
                             <input value="true" name="isQuickSearch" type="hidden"></input></form>
                     </div>
+                  
                     <div id="navigation">
                         <div id="navigationWrapper">
                             <ul id="homenav" class="closed">
@@ -5334,6 +5339,7 @@ Port:443--><!-- Left Column -->
                                         <span class="label"> Subject</span>
                                         <span class="browseArrow">  </span>
                                     </a>
+                                    
                                     <ul id="ORONavigation" class="taxonomyNavigation expandContractBox">
                                         <li class="column">
                                             <ul>
@@ -6067,5 +6073,6 @@ Port:443--><!-- Left Column -->
                 setDomLoaded.defer();
             });
         </script>
+        @endsection
     </body>
 </html>

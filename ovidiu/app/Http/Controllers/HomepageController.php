@@ -21,6 +21,12 @@ class HomepageController extends Controller
         return view('homepage', compact('team_members'));
     }
 
+
+    public function oxfordreference()
+    {
+        return view('/oxfordreference');
+    }
+
     /**
      * Show the form for creating a new resource.
      */

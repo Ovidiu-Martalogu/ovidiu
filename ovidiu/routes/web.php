@@ -4,3 +4,4 @@ use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
 
 Route::any('/', [HomepageController::class, 'index'])->name('homepage');
+Route::any('/oxfordreference', [HomepageController::class, 'oxfordreference'])->name('oxfordreference');
