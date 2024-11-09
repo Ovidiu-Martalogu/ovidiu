@@ -5246,11 +5246,14 @@ Port:443--><!-- Left Column -->
         <div class="twoColumnAlpha" id="contentWrapper">
             <div id="headerWrap">
                 <div id="header">
+                     <!-- header eu-->
+                <h1>Welcome to Octavian's Webside</h1>
+                <h4 style="font-family:Lucida Handwriting, monospace;" id="Home">I am a junior web developer</h4>
                     <div id="headerUtilityBar">
+                                       
                         <div>
                             <div id="loginNav">
-
-
+                
                     <span class="personalization-link-sign-in">
                         <a id="signIn" data-testid="login" href="/login">
                             Personal Profile
@@ -6073,6 +6076,7 @@ Port:443--><!-- Left Column -->
                 setDomLoaded.defer();
             });
         </script>
-        @endsection
+        
     </body>
+    @endsection
 </html>
