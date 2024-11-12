@@ -1,4 +1,12 @@
 @extends('layouts.app')
+
+@push("internal-style")
+    <link as="script" rel="preconnect" href="//ajax.googleapis.com">
+    <link crossorigin="" as="script" rel="preconnect" href="//ajax.googleapis.com">
+    <link as="script" rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link href="https://www.oxfordreference.com/page/134" rel="canonical">
+@endpush
+
 @section('content')
 <!DOCTYPE html><!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie6" lang="en"><![endif]-->
@@ -66,10 +74,6 @@ Port:443--><!-- Left Column -->
                 window.addEventListener('DOMContentLoaded', f);
             }
         }</script>
-    <link as="script" rel="preconnect" href="//ajax.googleapis.com">
-    <link crossorigin="" as="script" rel="preconnect" href="//ajax.googleapis.com">
-    <link as="script" rel="dns-prefetch" href="//ajax.googleapis.com">
-    <link href="https://www.oxfordreference.com/page/134" rel="canonical">
 
     <title>Science and Technology - Oxford Reference</title>
 
@@ -5223,7 +5227,7 @@ Port:443--><!-- Left Column -->
             <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NDJMKLV" height="0" width="0"
                     style="display:none;visibility:hidden"></iframe>
         </noscript>
-       
+
         <script>(function (w, d, s, l, i) {
                 w[l] = w[l] || [];
                 w[l].push({
@@ -5250,10 +5254,10 @@ Port:443--><!-- Left Column -->
                 <h1>Welcome to Octavian's Webside</h1>
                 <h4 style="font-family:Lucida Handwriting, monospace;" id="Home">I am a junior web developer</h4>
                     <div id="headerUtilityBar">
-                                       
+
                         <div>
                             <div id="loginNav">
-                
+
                     <span class="personalization-link-sign-in">
                         <a id="signIn" data-testid="login" href="/login">
                             Personal Profile
@@ -5332,7 +5336,7 @@ Port:443--><!-- Left Column -->
                                 </a></div>
                             <input value="true" name="isQuickSearch" type="hidden"></input></form>
                     </div>
-                  
+
                     <div id="navigation">
                         <div id="navigationWrapper">
                             <ul id="homenav" class="closed">
@@ -5342,7 +5346,7 @@ Port:443--><!-- Left Column -->
                                         <span class="label"> Subject</span>
                                         <span class="browseArrow">  </span>
                                     </a>
-                                    
+
                                     <ul id="ORONavigation" class="taxonomyNavigation expandContractBox">
                                         <li class="column">
                                             <ul>
@@ -6076,7 +6080,7 @@ Port:443--><!-- Left Column -->
                 setDomLoaded.defer();
             });
         </script>
-        
+
     </body>
     @endsection
 </html>
