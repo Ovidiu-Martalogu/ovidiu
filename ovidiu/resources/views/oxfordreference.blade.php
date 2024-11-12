@@ -6069,18 +6069,21 @@ Port:443--><!-- Left Column -->
             type="text/javascript">console.debug('Loading library https://www.oxfordreference.com/assets/shared/za588633f/js/dist/imageLazyLoader.js synchronously in body, after Tapestry imports');</script>
         <script src="https://www.oxfordreference.com/assets/shared/za588633f/js/dist/imageLazyLoader.js"
                 type="text/javascript"></script>
-        <script type="text/javascript">
-            document.domLoaded = false;
-
-            function setDomLoaded() {
-                document.domLoaded = true;
-            }
-
-            document.observe('dom:loaded', function () {
-                setDomLoaded.defer();
-            });
-        </script>
 
     </body>
     @endsection
 </html>
+
+@push('inline-scripts')
+    <script type="text/javascript">
+        document.domLoaded = false;
+
+        function setDomLoaded() {
+            document.domLoaded = true;
+        }
+
+        document.observe('dom:loaded', function () {
+            setDomLoaded.defer();
+        });
+    </script>
+@endpush
