@@ -147,5 +147,6 @@
             border-radius: 8px;
         }
     </style>
-  
+
+    @stack('internal-style')
 </head>
