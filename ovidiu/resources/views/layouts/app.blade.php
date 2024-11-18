@@ -12,7 +12,7 @@
 {{--            @include('partials.general.sidebar')--}}
             {{-- @endif --}}
 
-            {{-- <div class="wrapper" @if(isset($sidebar) && !$sidebar) style="margin: 0" @endif> --}}
+            <div class="wrapper" @if(isset($sidebar) && !$sidebar) style="margin: 0" @endif> 
             <div class="wrapper">
                 @yield('content')
                 
