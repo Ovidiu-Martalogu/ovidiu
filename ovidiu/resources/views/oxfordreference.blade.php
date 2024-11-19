@@ -142,14 +142,14 @@ Port:443--><!-- Left Column -->
                href="/page.layout.odopopupwidget:ajaxupdate?t:ac=scienceandtech&amp;t:ac=scienceandtech">Update</a></div>
         <a id="jumpToContent" href="#mainContent" class="offScreen skip js-skip">Jump to
             Content</a>
-        <div class="twoColumnAlpha" id="contentWrapper">
+        <div class="pw-3">
             <div >
                 <div >
                      <!-- header eu-->
                 <h1>Welcome to Octavian's Webside</h1>
                 <h4 style="font-family:Lucida Handwriting, monospace;" id="Home">I am a junior web developer</h4>
                     <div id="headerUtilityBar">
-
+                    
                         <div>
                             <div id="loginNav">
 
@@ -529,8 +529,8 @@ Port:443--><!-- Left Column -->
                             </ul>
                         </div>                <!-- leftSidebar content -->            </div>
                         
-                    <div  >
-                        <div class="mt-3 c-Container c-Container--flush c-Card c-Card--flush">
+                    <div>
+                        <div class="container-section">
                             <h1 class="text-display2 m-0 px-4" id="pagetitle">Science and Technology</h1>
                             <div class="px-4" id="pageContent"><p><img src="/fileasset/science_small.jpg"
                                                                        style="float:left; margin-right:10px"
@@ -548,6 +548,11 @@ Port:443--><!-- Left Column -->
                                     mathematics, to life and earth sciences, chemistry, environmental science, biology, and
                                     psychology. Written by trusted experts for researchers at every level, entries are
                                     complemented by illustrative line drawings, equations, and charts wherever useful.</p>
+</div>
+</div>
+<br>
+<br>
+<div class="container-section" >
                                 <p><strong>Jump to:</strong></p>
                                 <blockquote>
                                     <p><a href="#Sample-resources"><strong>Sample resources</strong></a> | <a
@@ -576,6 +581,10 @@ Port:443--><!-- Left Column -->
                                             See all the Science and Technology books available on <em>Oxford Reference</em> &gt;<br/>
                                             <br/>
                                         </strong></a></p>
+</div>
+<br>
+<br>
+<div class="container-section" >
                                 <h4><a name="Sample-resources"></a><strong><span
                                             style="font-size: larger;">Sample resources</span></strong></h4>
                                 <p>Discover science and technology on <em>Oxford Reference</em> with the below sample content:
@@ -602,6 +611,10 @@ Port:443--><!-- Left Column -->
                                             target="_blank">The planets: orbital and physical data</a>' from <em>A Dictionary of
                                             Astronomy</em></p>
                                 </blockquote>
+</div>
+<br>
+<br>
+<div class="container-section" >
                                 <p><a href="#Page-top">Back to top &gt;</a></p>
                                 <div class="author-bio">
                                     <h4><a name="Featured-author"></a>Featured author</h4>
@@ -621,6 +634,10 @@ Port:443--><!-- Left Column -->
                                             Encyclopedia of Psychology</em> and the 12-volume <em>Longman Essential
                                             Psychology</em> series.</p>
                                 </div>
+</div>
+<br>
+<br>
+<div class="container-section" >
                                 <h4><strong><span style="font-size: larger;">Author Q&amp;A</span></strong></h4>
                                 <h3>What is the one term or concept that everyone—from students to everyday web users—should be
                                     familiar with? Why?</h3>
@@ -736,6 +753,10 @@ Port:443--><!-- Left Column -->
                                     conjunction fallacy in this example.</p>
                                 <p><a href="#Page-top">Back to top &gt;</a><br/>
                                 </p>
+                                </div>
+<br>
+<br>
+<div class="container-section" >
                                 <h4><a name="Blog-posts"></a><strong><span
                                             style="font-size: larger;">Featured blogs</span></strong></h4>
                                 <p><br/>
@@ -760,6 +781,9 @@ Port:443--><!-- Left Column -->
                                             archives &gt;</strong></a></p>
                                 <p><a href="#Page-top">Back to top &gt;</a><br/>
                                 </p>
+</div>
+<br>
+<div class="container-section" >
                                 <h4><a name="More-from-OUP"></a><strong><span
                                             style="font-size: larger;">More From OUP</span></strong></h4>
                                 <p>Stay up-to-date with Oxford University Press by opting in to receive information in several
@@ -788,6 +812,7 @@ Port:443--><!-- Left Column -->
                         </div>
                     </div>
                 </div><!-- end pageBody -->
+</div>
                 <div id="columnsBottom">
                     <div class="cap"></div>
                 </div>
