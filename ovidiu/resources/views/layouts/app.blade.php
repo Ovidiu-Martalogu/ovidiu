@@ -12,17 +12,15 @@
 {{--            @include('partials.general.sidebar')--}}
             {{-- @endif --}}
 
-            <div class="wrapper" @if(isset($sidebar) && !$sidebar) style="margin: 0" @endif> 
             <div class="wrapper">
                 @yield('content')
-                
-              @include('partials.general.footer')
+
+                @include('partials.general.footer')
             </div>
 
 {{--        @else--}}
 {{--            @yield('content')--}}
 {{--        @endauth--}}
-        </div>
         <div id="overlay-loading" style="display: none"><img src="{{ asset('images/loading_spinner.gif') }}"/></div>
 
         @section('scripts')
