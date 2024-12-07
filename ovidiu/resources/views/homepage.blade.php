@@ -6,12 +6,7 @@
         <!-- end NAVBAR -->
 
         <!-- HEADER -->
-        <header>
-            <h1>Welcome to Octavian's Webside</h1>
-            <h4 style="font-family:Lucida Handwriting, monospace;" id="Home">I am a junior web developer</h4>
-        </header>
-        <!-- END HEADER -->
-
+      
         <!-- MAIN -->
         <main class="px-3">
 
