@@ -1,8 +1,9 @@
-@extends('layouts.admin')
+@extends('layouts.admin_screen')
+@extends('partials.general.head')
 @section('content')
 
 <body>
-
+<!-- test
 <form action="{{route("admin_save")}}" method="post" enctype="multipart/form-data" target="_blank">
 @csrf
 <section class="container-contact w-100" id="Contact">
@@ -40,6 +41,7 @@
         <option value="{{$member->position}}">{{$member->photo}}</option>
         </select>
         <br><br>
+        endtest -->
 <!--
 <div class="col"><label for="photo" >Photo</label></div>
   <input class="form-check-input" type="checkbox" id="Tibi" value="Tibi" height="20">
@@ -51,7 +53,7 @@
 <option><img src="{{ isset($member->photo) ? asset('images/' . $member->photo) : "" }}" 
         height="150" alt="team member"></option>
                     </select> -->
-                @endforeach
+               <!-- @endforeach -->
                
 
  <!--
@@ -70,6 +72,7 @@
  <br>
  <br>
  <br> -->
+ <!-- test
  <h3>Contact</h3>
   
   <label for="email">Email:</label>
@@ -80,6 +83,6 @@
   <input type="text" id="telephone" name="telephone" placeholder="Telephone" required><br><br>
   <input type="submit" value="Submit">
 </form>
-
+endtest-->
 </body>
 @endsection
