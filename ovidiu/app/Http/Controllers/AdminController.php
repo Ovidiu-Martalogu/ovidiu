@@ -24,9 +24,9 @@ class AdminController extends Controller
 
     public function admin()
     {
-        $team_members = Team::all();
-        return view('admin', compact('team_members'));
-        //return view('/admin');
+       // $team_members = Team::all();
+       // return view('admin', compact('team_members'));
+        return view('/admin');
     }
     public function admin_save()
     {
