@@ -39,9 +39,9 @@ class AdminController extends Controller
     {
         $request->validate(
             [
-               
+              
                 "address"=>"required",
-                "email"=>"required",
+                "email"=>"required|email|unique",
                 "telephone"=>"required"
             ]
         );

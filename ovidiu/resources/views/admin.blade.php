@@ -38,38 +38,41 @@
                 </div>
                 <br>
                 
-                <?php
-               $services_description = array("Presentation_sites" => 
+               
+              @php 
+              $services_description = array(
+                "Presentation_sites" => 
                                  " We create professional presentation websites for small and large businesses. Our team ensures that each
                         website created is unique and meets the client's specific requirements.",
     
-                            "Online_shops" => "A professional online store is essential for any
+                "Online_shops" => "A professional online store is essential for any
                         business that wants to expand its business and reach
                         new customers. With an attractive design and well-organized
                         functionality, a professional online store can increase sales
                         and strengthen the reputation of the business.",
     
-                           "Graphic_design" => "Whether you need a new logo or
+                "Graphic_design" => "Whether you need a new logo or
                         an advertising campaign with banners and flyers,
                         our team of professional designers can help you
                         develop your brand image and differentiate yourself
-                        from the competition.");   
-               /*var_dump( $services_description);*/?> 
-                 @foreach ($services_description as $key => $value)
+                        from the competition.");  
+                       
+            @endphp
+              
+                 @foreach ($services_description as $services => $description)
                     
                 <div class="row">
                     
                     <div class="col-9">
-                    <label for="services_description"> {{$key . " : " . $value}}</label>
-                    <input type="checkbox" id="services_description" name="services_description" >
+                    <label for="services_description"> {{$services . " : " . $description}}</label>
+                    <input type="checkbox" id="services_description" name="services_description[]" >
                     <br>
                    
                  </div>
                  </div>
                      @endforeach
-    
-
-
+                <br>
+            
                 <br>
                 <div class="row">
                     <label class="col-3" for="contact">Contact</label>
