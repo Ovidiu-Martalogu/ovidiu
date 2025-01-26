@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 Route::any('/', [HomepageController::class, 'index'])->name('homepage');

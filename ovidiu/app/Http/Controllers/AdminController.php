@@ -9,6 +9,8 @@ class AdminController extends Controller
         return view('/admin');
     }
 
+    
+
     public function adminSave()
     {
         // here we are not going to return a view, because the view is already returned from the admin function
