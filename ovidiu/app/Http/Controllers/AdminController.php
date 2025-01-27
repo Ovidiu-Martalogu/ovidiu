@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Description;
+
 class AdminController extends Controller
 {
     public function admin()
     {
         return view('/admin');
     }
-
-    
 
     public function adminSave()
     {
@@ -26,31 +26,35 @@ class AdminController extends Controller
 
         // after commenting dump and die, and dd, then the code below will be executed
 
-        if (!empty(request('about_description'))) {
+        // get description from database through model
+        $description = Description::firstOrNew(); // we should have one record in the database because there is only one site,
+        // so apply first() instead of get() to get all
+
+        // initialize string variables
+        $success = $error = "";
+
+        $services = request('services_description');
+        if(!empty($services)) {
+//             dd($services);
+            $description->service_description = json_encode($services);
             $success = "The infos have been successfully saved";
-            return view('admin_save')->with('message', $success);
-        } else {
-            $error = "The description for the about section is mandatory";
-            return redirect()->route('admin')->with('error', $error)->withInput(); 
         }
+
+        $description->home_description = " ";
+        $description->about_description = " ";
+        $description->save();
+
+//        if (!empty(request('about_description'))) {
+//            $success = "The infos have been successfully saved";
+//            return redirect()->route('admin')->with('message', $success);
+//        } else {
+//            $error = "The description for the about section is mandatory";
+//            return redirect()->route('admin')->with('error', $error)->withInput(); // ->withInput() ensures the old input values are flashed to the session:
+//            // meaning filled with the values the input already introduced before save, if the fields have old_value added
+//        }
+
+        return redirect()->route('admin')
+            ->with('message', $success)
+            ->with('error', $error)->withInput();
     }
-/*
-    public function save(AdminController $request)
-    {
-        $request->validate(
-            [
-              
-                "address"=>"required",
-                "email"=>"required|email|unique",
-                "telephone"=>"required"
-            ]
-        );
-        $contact = new Contact();
-        $contact->address = $request->address;
-        $contact->email = $request->email;
-        $contact->telephone = $request->telephone;
-        $contact->save();
-        return redirect()->route('admin_save')->with('success');
-    }
-    */ 
 }

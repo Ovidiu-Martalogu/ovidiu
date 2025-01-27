@@ -2,14 +2,19 @@
 
     @section('content')
         <!-- NAVBAR -->
-       
+
         <!-- end NAVBAR -->
 
         <!-- HEADER -->
-      
+
         <!-- MAIN -->
         <main class="px-3">
-
+            <div class="row">
+                <div class="col text-end">
+                    <a href="{{ route('admin') }}" class="btn btn-success">Admin panel ></a>
+                </div>
+            </div>
+            <br>
             <!-- description section -->
             <section class="container-section">
                 <! --<img style="border-radius: 9px;"
@@ -94,91 +99,104 @@
             <article class="container-article" id="Services">
                 <h2>Our Services</h2>
                 <h3>Here are the services Octavian offers:</h3>
-                <ul style="list-style-type: square;">
-                    <li style="font-family:Lucida Console, monospace; font-size:large;">&#128073;Presentation sites:</li>
+
+                <ul>
+                    @if(!empty($description->service_description))
+                        @foreach(json_decode($description->service_description) as $index => $service)
+                            <li class="mb-3">
+                                &#128073;{{ $service }}
+                            </li>
+                        @endforeach
+                    @endif
                 </ul>
-                <div class="ps-2 ps-xl-5">
-                    <p>We create professional presentation websites for small and large businesses. Our team ensures that each
-                        website created is unique and meets the client's specific requirements.</p>
-                    <p>A showcase website is essential for any business today.
-                        It can be considered the company's digital business card,
-                        providing information about products and services
-                        as well as contact details for potential customers.</p>
-                    <p> With an attractive design and a well-organized
-                        structure, a professional presentation website can
-                        increase credibility and attract new customers.</p>
-                    <p>We are committed to creating showcase websites
-                        that are optimized for search engines so that they
-                        help businesses appear in the first search results
-                        and be easier to find online. </p>
-                    <p>We use SEO best practices
-                        to ensure your website has quality content, well-written
-                        meta titles and descriptions, and the right keywords
-                        to help improve your search engine rankings.</p>
-                    <p>We also ensure that the website is responsive
-                        and works well on mobile devices, which is essential
-                        these days as most people access the internet on mobile devices.</p>
-                    <p>With a customized approach to each project,
-                        we can create a presentation website that matches
-                        the company's visual identity and meets the specific
-                        requirements of our clients.</p>
-                </div>
-                <br>
 
-                <ul style="list-style-type: square;">
-                    <li style="font-family:Monaco, Fantasy; font-size:large;">&#128073;Online shops:</li>
-                </ul>
-                <div class="ps-2 ps-xl-5">
-                    <p>A professional online store is essential for any
-                        business that wants to expand its business and reach
-                        new customers. With an attractive design and well-organized
-                        functionality, a professional online store can increase sales
-                        and strengthen the reputation of the business.</p>
+                {{--
+                                <ul style="list-style-type: square;">
+                                    <li style="font-family:Lucida Console, monospace; font-size:large;">&#128073;Presentation sites:</li>
+                                </ul>
+                                <div class="ps-2 ps-xl-5">
+                                    <p>We create professional presentation websites for small and large businesses. Our team ensures that each
+                                        website created is unique and meets the client's specific requirements.</p>
+                                    <p>A showcase website is essential for any business today.
+                                        It can be considered the company's digital business card,
+                                        providing information about products and services
+                                        as well as contact details for potential customers.</p>
+                                    <p> With an attractive design and a well-organized
+                                        structure, a professional presentation website can
+                                        increase credibility and attract new customers.</p>
+                                    <p>We are committed to creating showcase websites
+                                        that are optimized for search engines so that they
+                                        help businesses appear in the first search results
+                                        and be easier to find online. </p>
+                                    <p>We use SEO best practices
+                                        to ensure your website has quality content, well-written
+                                        meta titles and descriptions, and the right keywords
+                                        to help improve your search engine rankings.</p>
+                                    <p>We also ensure that the website is responsive
+                                        and works well on mobile devices, which is essential
+                                        these days as most people access the internet on mobile devices.</p>
+                                    <p>With a customized approach to each project,
+                                        we can create a presentation website that matches
+                                        the company's visual identity and meets the specific
+                                        requirements of our clients.</p>
+                                </div>
+                                <br>
 
-                    <p>We are committed to creating professional online
-                        stores that are search engine optimized to help
-                        businesses appear in the top search results and be
-                        easier to find online.</p>
-                    <p> We also ensure that the online store is responsive
-                        and works well on mobile devices, which is essential
-                        these days as most people access the internet from mobile devices.</p>
+                                <ul style="list-style-type: square;">
+                                    <li style="font-family:Monaco, Fantasy; font-size:large;">&#128073;Online shops:</li>
+                                </ul>
+                                <div class="ps-2 ps-xl-5">
+                                    <p>A professional online store is essential for any
+                                        business that wants to expand its business and reach
+                                        new customers. With an attractive design and well-organized
+                                        functionality, a professional online store can increase sales
+                                        and strengthen the reputation of the business.</p>
 
-                    <p>We ensure that the online store is secure
-                        and all transactions are protected so
-                        that customers feel safe when shopping online.</p>
+                                    <p>We are committed to creating professional online
+                                        stores that are search engine optimized to help
+                                        businesses appear in the top search results and be
+                                        easier to find online.</p>
+                                    <p> We also ensure that the online store is responsive
+                                        and works well on mobile devices, which is essential
+                                        these days as most people access the internet from mobile devices.</p>
 
-                    <p>With a customized approach to each project,
-                        we can create a professional online store that
-                        matches the company's visual identity and meets
-                        the specific requirements of its customers.</p>
-                </div>
-                <br>
+                                    <p>We ensure that the online store is secure
+                                        and all transactions are protected so
+                                        that customers feel safe when shopping online.</p>
 
-                <ul style="list-style-type: square;">
-                    <li style="font-family:Verdana, Serif; font-size:large;">&#128073;Graphic design:</li>
-                </ul>
-                <div class="ps-2 ps-xl-5">
-                    <p>Whether you need a new logo or
-                        an advertising campaign with banners and flyers,
-                        our team of professional designers can help you
-                        develop your brand image and differentiate yourself
-                        from the competition.</p>
+                                    <p>With a customized approach to each project,
+                                        we can create a professional online store that
+                                        matches the company's visual identity and meets
+                                        the specific requirements of its customers.</p>
+                                </div>
+                                <br>
 
-                    <p>Each graphic design project is unique and
-                        customized to fit your business needs and
-                        values. We ensure that every element, from your
-                        logo to banner ads, successfully communicates
-                        your message and seamlessly integrates with your
-                        business's visual identity.</p>
+                                <ul style="list-style-type: square;">
+                                    <li style="font-family:Verdana, Serif; font-size:large;">&#128073;Graphic design:</li>
+                                </ul>
+                                <div class="ps-2 ps-xl-5">
+                                    <p>Whether you need a new logo or
+                                        an advertising campaign with banners and flyers,
+                                        our team of professional designers can help you
+                                        develop your brand image and differentiate yourself
+                                        from the competition.</p>
 
-                    <p>Whether you're a new business looking
-                        to develop their brand image or an existing
-                        business looking to update their design, we're
-                        here to help you achieve the best possible graphic
-                        design. We are dedicated to providing high quality
-                        graphic design solutions to help you differentiate
-                        and stand out in the market.</p>
-                </div>
+                                    <p>Each graphic design project is unique and
+                                        customized to fit your business needs and
+                                        values. We ensure that every element, from your
+                                        logo to banner ads, successfully communicates
+                                        your message and seamlessly integrates with your
+                                        business's visual identity.</p>
+
+                                    <p>Whether you're a new business looking
+                                        to develop their brand image or an existing
+                                        business looking to update their design, we're
+                                        here to help you achieve the best possible graphic
+                                        design. We are dedicated to providing high quality
+                                        graphic design solutions to help you differentiate
+                                        and stand out in the market.</p>
+                                </div>
+                --}}
             </article>
             <!-- end SERVICES section -->
 
@@ -274,5 +292,5 @@
 
     @endsection
         <!-- FOOTER -->
-       
+
         <!-- end FOOTER -->

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreteamRequest;
 use App\Http\Requests\UpdateteamRequest;
+use App\Models\Description;
 use App\Models\Team;
 use Illuminate\Support\Facades\DB;
 
@@ -18,7 +19,9 @@ class HomepageController extends Controller
 //        return view('team', compact('data'))->with('i', (request()->input('page', 1) - 1 * 10));
 
         $team_members = Team::all();
-        return view('homepage', compact('team_members'));
+        $description = Description::firstOrNew();
+
+        return view('homepage', compact('team_members', 'description'));
     }
 
 
