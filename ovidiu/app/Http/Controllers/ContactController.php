@@ -45,7 +45,7 @@ class ContactController extends Controller
         $contact->telephone = $request->telephone;
         $contact->save();
     
-        return redirect()->route('admin')->with('success', 'Wellcome');
+       // return redirect()->route('admin')->with('success', 'Wellcome');
     }
 
     /**

@@ -12,8 +12,17 @@
             <div class="row">
                 <div class="col text-end">
                     <a href="{{ route('admin') }}" class="btn btn-success">Admin panel ></a>
+                    <br>
+                    <a href="{{ route('mesaje') }}" class="btn btn-success">Mesaje ></a>
+                  
                 </div>
             </div>
+            <!--Cards -->
+            <div class="row">
+                    <div class="col text-end mb-3">
+                    <a href="/cards">Cards</a>
+                    </div>
+                </div>
             <br>
             <!-- description section -->
             <section class="container-section">
@@ -252,38 +261,50 @@
                                 </ul>
                             </div>
                         </div>
+                        
+                        @if(empty($_POST['address'])){
+                            @foreach($contact as $row)
+                           
 
-                        <div class="col-md-5 text-right">
+                            <tr style="border:2px solid grey">
+                            <td style="border:2px solid grey">Address:{{$row->address}}</td><br>
+                            <td style="border:2px solid grey">Email:{{$row->email}}</td><br>
+                            <td style="border:2px solid grey">Telephone:{{$row->telephone}}</td>
+                            </tr>
+                        }
+                        @endforeach
+                        @else{
+                                        
+                            <div class="col-md-5 text-right">
                             <h3>Contact Form</h3>
-
                             <form role="form" class="contact-form" id="contact-form" name="contactformfree" method="post" action="free_process.php" onsubmit="return validate.check(this)">
                                 <div class="form-group">
                                     <label for="fullName">Full Name :</label>
                                     <input type="text" class="form-control" name="Full_Name" id="Full_Name" aria-describedby="emailHelp" placeholder="Full Name" required="">
                                 </div>
-
                                 <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <input type="email" class="form-control" name="Email_Address" id="Email_Address" aria-describedby="emailHelp" placeholder="Email" required="">
+                                   <label for="Email">Email:</label>
+                                   <input type="Email" class="form-control" name="Email_Address" id="Email_Address" aria-describedby="emailHelp" placeholder="Email" required="">
                                 </div>
-
-
                                 <div class="form-group">
-                                    <label for="mobile">Mobile No :</label>
+                                    <label for="mobile">Mobile No :</label>                                
                                     <input type="number" class="form-control" name="Full_Name2" id="Full_Name2" aria-describedby="emailHelp" placeholder="Mobile No." required="">
                                 </div>
-
-                                <div class="form-group">
+                                 <div class="form-group">
                                     <label for="messages">Messages :</label>
                                     <textarea class="form-control" name="Your_Message" id="Your_Message" rows="5"></textarea>
                                 </div>
                                 <br>
                                 <button type="submit" class="btn btn-primary">Send</button>
                                 <a href="#Home">&#128285;</a>
+                               
                             </form>
                         </div>
                     </div>
                 </div>
+            }
+            @endif
+            
             </section>
             <!-- end CONTACT section -->
 

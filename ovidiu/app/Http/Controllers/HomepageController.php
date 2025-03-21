@@ -6,6 +6,7 @@ use App\Http\Requests\StoreteamRequest;
 use App\Http\Requests\UpdateteamRequest;
 use App\Models\Description;
 use App\Models\Team;
+use App\Models\Contact;
 use Illuminate\Support\Facades\DB;
 
 class HomepageController extends Controller
@@ -20,8 +21,9 @@ class HomepageController extends Controller
 
         $team_members = Team::all();
         $description = Description::firstOrNew();
+        $contact = Contact::latest();
 
-        return view('homepage', compact('team_members', 'description'));
+        return view('homepage', compact('team_members', 'description','contact'));
     }
 
 

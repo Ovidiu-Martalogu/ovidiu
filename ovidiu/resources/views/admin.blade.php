@@ -1,39 +1,36 @@
 @extends('layouts.admin_screen')
 @section('content')
 
-    <div class="row my-5">
-        <div class="col">
+                <div class="row my-5">
+                    <div class="col">
 
-            @if(session('message'))
-                <div class="alert alert-success">
-                    {{ session('message') }}
-                </div>
-            @endif
+                @if(session('message'))
+                    <div class="alert alert-success">
+                        {{ session('message') }}
+                    </div>
+                @endif
 
-            @if(session('error'))
-                <div class="alert alert-danger">
-                    {{ session('error') }}
-                </div>
-            @endif
+                 @if(session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                 @endif
 
-            <div class="row">
-                <div class="col text-end mb-3">
-                    <a href="{{ route('homepage') }}" class="btn btn-success">< Homepage</a>
-                </div>
-            </div>
-
-            <form action="{{ route('admin_save') }}" method="POST">
-                @csrf
                 <div class="row">
-                    <label class="col-3" for="home_description">Home Description</label>
-                    <div class="col-9">
-                        <textarea class="form-control" id="home_description" name="home_description" placeholder="Description for the 'home' section">{{ old('home_description') }}</textarea>
-
+                    <div class="col text-end mb-3">
+                        <a href="{{ route('homepage') }}" class="btn btn-success">< Homepage</a>
                     </div>
                 </div>
 
+                <form action="{{ route('admin_save') }}" method="POST">
+                @csrf
+                    <div class="row">
+                        <label class="col-3" for="home_description">Home Description</label>
+                        <div class="col-9">
+                        <textarea class="form-control" id="home_description" name="home_description" placeholder="Description for the 'home' section">{{ old('home_description') }}</textarea>
+                    </div>
+                </div>
                 <br>
-
                 <div class="row">
                     <label class="col-3" for="about_description">About Description</label>
                     <div class="col-9">
@@ -89,19 +86,20 @@
 
 
                 <br>
-
+                <br>
+               @include('partials.team')
                 <br>
                 <div class="row">
                     <label class="col-3" for="contact">Contact</label>
                     <div class="col-6">
                         <label for="Address" >Address</label>
-                        <input type="text" id="Address" name="Address" placeholder="Address">
+                        <input type="text" id="address" name="address" placeholder="Address">
                         <br><br>
                         <label for="Email" >Email</label>
-                        <input type="Email" id="Email" name="Email" placeholder="Email">
+                        <input type="Email" id="email" name="email" placeholder="Email">
                         <br><br>
                         <label for="Telephone" >Telephone</label>
-                        <input type="Telephone" id="Telephone" name="Telephone"  placeholder="Telephone" >
+                        <input type="Telephone" id="telephone" name="telephone"  placeholder="Telephone" >
                         <br><br>
                     </div>
                 </div>
