@@ -3,6 +3,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Octavian</title>
 
+    <!-- Fonts and icons -->
+    <link href="{{ asset('fontawesome_5.7.2/css/all.css') }}" rel="stylesheet"> <!--load all fontawesome styles -->
+
     <style>
         body {
             margin: 0;

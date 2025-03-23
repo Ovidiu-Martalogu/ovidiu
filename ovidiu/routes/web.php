@@ -12,7 +12,8 @@ Route::any('/admin', [AdminController::class, 'admin'])->name('admin');
 
 Route::any("/admin_save",[AdminController::class, 'adminSave'])->name('admin_save');
 Route::any('/mesaje', [MesajeController::class, 'mesaje'])->name('mesaje');
- Route::get('/cards', function () {
-  return view('cards'); });
+Route::get('/cards', function () {
+  return view('cards');
+});
 
 
